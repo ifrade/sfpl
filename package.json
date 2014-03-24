@@ -1,0 +1,27 @@
+{
+  "name": "sfpl",
+  "version": "0.1.0",
+  "description": "Node API for the San Francisco Public Library (SFPL).",
+  "main": "lib/sfpl.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -R spec test/unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "xxxxx/push/to/gitorious"
+  },
+  "dependencies": {
+    "request": "*",
+    "jsdom": "*",
+    "should": "*",
+    "mocha": "*",
+    "async": "*"
+  },
+  "keywords": [
+    "sfpl",
+    "client",
+    "api",
+    "San Francisco Public Library"
+  ],
+  "author": "ivan.frade@gmail.com"
+}

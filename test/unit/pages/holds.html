@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" />
+<script type="text/javascript" src="/scripts/elcontent.js"></script>
+<script type="text/javascript" src="/scripts/common.js"></script>
+<script type="text/javascript" src="/scripts/features.js"></script>
+<script type="text/javascript" src="/scripts/webbridge.js"></script>
+	<!-- title should be specific - general for better usability in bookmarking -->
+	<title>Your Library Record - SFPL.org</title>
+
+	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="en-us" />
+ <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+
+    <!-- local style sheet rules -->
+    <style type="text/css">
+		a.expired {
+			color: #f00;
+			}
+		a.expired:visited {
+			color: #f00;
+			}
+		tr.on_ice td.patFuncPickup {
+			background-image: url(/screens/frozen-text.jpg);
+			background-repeat: no-repeat;
+			padding-top: 30px;
+			}
+		tr.on_ice td.patFuncFreeze {
+			background-image: url(/screens/frozen.jpg);
+			background-repeat: no-repeat;
+			padding-top: 30px;
+			width: 56px;
+			}
+		td {
+			font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+			}
+
+		.detail {
+			padding-right : 4px;
+			}
+		
+		.fields {
+			display: inline;
+			width: 13.2em;
+			}
+		.headerlinks {
+			font-size : 12px;
+			padding-top : 4px;
+			padding-right : 4px;
+			}
+		.headerlinks2 {
+			font-size : 11px;
+			padding-right : 4px;
+			padding-top : 4px;
+			}
+		.helpbox {
+			border: 1px solid #c90;
+			clear: none;
+			margin-top: 10px;
+			width: 40%;
+			float: left;
+			padding: 0px;
+			}
+		.helpbox h2 {
+			display: block;
+			margin: 10px 0;
+			text-align: center;
+			}
+		.helpbox ul {
+			font-size : 11px;
+			list-style-type: none;
+			margin: 5px 10px 10px 10px;
+			padding: 0;
+			}
+		.helpbox li {
+			margin: 8px 0;
+			padding : 0;
+			}
+		.hideshow {
+			display : inline;
+			}
+		.hidden {
+			display : none;
+			}
+		.mailnote {
+        	font-size : 11px;
+			font-weight : bold;
+        	color : dark green;
+        	font-style : normal;
+        	text-align : left;
+        	background-color : #cfd3ad;
+        	border:1px solid #cfd3ad;
+        	}
+		.privacy {
+		font-size : 9px;
+		font-style : normal;
+		text-align : left;
+		}
+		.patronoptions {
+			font-size: .8em;
+			width: 40%;
+			float: left;
+			margin-left:auto;
+			margin-right:auto;
+			padding: 10px 0;
+			}
+		.patronoptions th {
+			padding: 2px 0;
+			}
+		.userstatuscell {
+			width : 180px;
+			margin-top : 0px;
+			}
+		.userstatustitle {
+			font-family : Verdana;
+			color : #000000;
+			font-size : 11px;
+			font-weight : normal;
+			padding : 10px;
+			padding-top:5px;
+			}
+             .bibSearchtool {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+                        border: 1px solid #bbb;
+			padding-top: 20px;
+			padding-bottom: 10px;
+                        }
+.patFunc { border-top:0px solid; border-spacing:0; width:100%; }
+
+    </style>
+
+<script>
+function open_new_window( new_URL ) {
+var w = (window.open(new_URL, 'patwin',
+'width=900,height=800,status=yes,scrollbars=yes,resizable'));
+w.focus();
+return false;
+}
+</script>
+<script type="text/javascript" src="/screens/sfpl_ga.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<div align="center">
+<div class="main" style="width: 950px;"> 
+ <!-- primary content and sidebar navigation -->
+<table width="950" align="center" cellpadding="0" 
+cellspacing="0" border="0" summary="This table structures page content.">
+<tr> 
+<td colspan="2"> 
+<!-- header image, language links, and top navigation -->
+<table cellpadding="0" cellspacing="0" border="0" 
+summary="Table containing primary navigation and language options">
+              
+<tr class="headerrow"><td colspan="4">
+<a href="http://sfpl.org/" title="San Francisco Public Library home page">
+<img src="/screens/background_header.jpg" border="0" vspace="0" 
+alt="Go to the San Francisco Public Library home page"  /></a>
+
+<span class="fineprint" style="position: relative; bottom:20px; 
+right:150px;">
+<a href="http://sflib1.sfpl.org/search*spi">Espa&#241;ol</a>
+|
+<a href="http://sflib1.sfpl.org/search*cht">&#20013;&#25991;</a>
+</span>
+
+</td></tr>              
+			</table>
+
+
+			</td>
+		</tr>
+		<tr> 
+<td rowspan="3" align="left" valign="top">
+					 
+        			<!-- sidebar  -->
+<table class="userstatuscell" cellpadding="5" cellspacing="0" border="0" summary="This table contains the library patron log in status information.">
+							<tr> 
+<td class="userstatustitle" align="center" bgcolor="#f0f0e4">
+<p>
+<strong>Bla Bla, User</strong><br />
+Expiration Date:07-24-2017<br />
+</p>
+<p>
+<a class="expired" href="http://sfpl.org/index.php?pg=2000001201#expiredcard" target="_blank">Has your card expired?</a>
+</p>
+<p>
+<form>
+<a href="/logout~S1?" target="_self"><img src="/screens/logout.gif" alt="Log Out" border="0" /></a>
+<br />
+</form>
+<!--{logout}-->
+</p>
+								</td>
+							</tr>
+
+<tr><td class="mailnote">
+<p>
+Get Your Overdue and Request Notices by Email, Telephone or Text
+</p>
+<p>
+Click on Modify Personal Information.
+</p>
+<p>
+Choose how you would prefer to receive your notices from the list:
+Email or Telephone.
+</p>
+<p>
+Or, sign up for Text Messaging
+</p>
+
+
+</td></tr>
+<tr>
+<td align="center">
+<script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=sflib1.sfpl.org&amp;size=S&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script>
+</td></tr>
+
+
+						</table>
+				</td>
+			</tr>
+			<tr> 
+      <!-- content area -->
+<td>
+<!-- BEGIN SEARCH WIDGET -->
+<div align="center">
+
+<div  class="bibSearchtool">
+<script type="text/JavaScript">
+<!-- Hide the JS
+var savedScope;
+var savedTag;
+var savedSearch;
+var sortButtonText = null;
+var savedExactSearch = null;
+var sortButtonEvent = null;
+var sortExactBrowseURL = null;
+var sortTypes = new Array();
+var sortLabels = new Array();
+sortTypes[0] = "t";
+sortLabels[0] = "Title";
+sortTypes[1] = "a";
+sortLabels[1] = "Author";
+sortTypes[2] = "c";
+sortLabels[2] = "Year";
+sortTypes[3] = "r";
+sortLabels[3] = "Reverse Year";
+sortTypes[4] = "n";
+sortLabels[4] = "Call Number";
+sortTypes[5] = "m";
+sortLabels[5] = "Material Type";
+sortLabels[6] = "System Sorted";
+sortTypes[6] = "-";
+var sortSelectedValue = "6";
+var nonSortTags = "XYZprWw"
+// Unhide the JS -->
+</script>
+<form name="searchtool" target="_self" action="/search~S1/" method='GET'>
+      <label for="searchtype" style="display:none;">SearchType</label> <select name="searchtype" id="searchtype" onChange="initSort()">
+        <option value="a"> Author</option>
+        <option value="t"> Title</option>
+        <option value="d"> Subject</option>
+        <option value="c"> Call No</option>
+        <option value="X" selected="selected"> Keyword</option>
+      </select>
+      &nbsp;
+      <label for="searcharg" style="display:none;">Search</label><input type="text" name="searcharg" id="searcharg" size="30" onchange='return searchtoolSubmitAction()'maxlength="75" value="" />
+      &nbsp;
+      <label for="searchscope" style="display:none;">Search Scope</label><select name="searchscope" id="searchscope">
+        <option value="1" selected="selected"> View Entire Collection</option>
+        <option value="33"> Adult/Teen Materials</option>
+        <option value="4"> Anza</option>
+        <option value="5"> Bayview</option>
+        <option value="6"> Bernal Heights</option>
+        <option value="32"> Branch Bookmobile 1</option>
+        <option value="7"> Children's Bookmobile</option>
+        <option value="2"> Children's Materials Only</option>
+        <option value="8"> Chinatown</option>
+        <option value="9"> Eureka Valley</option>
+        <option value="10"> Excelsior</option>
+        <option value="11"> Glen Park</option>
+        <option value="12"> Golden Gate Valley</option>
+        <option value="13"> Ingleside</option>
+        <option value="14"> Library on Wheels</option>
+        <option value="3"> Main Library</option>
+        <option value="15"> Marina</option>
+        <option value="16"> Merced</option>
+        <option value="17"> Mission</option>
+        <option value="18"> Mission Bay</option>
+        <option value="19"> Noe Valley</option>
+        <option value="20"> North Beach</option>
+        <option value="21"> Oceanview</option>
+        <option value="22"> Ortega</option>
+        <option value="23"> Park</option>
+        <option value="24"> Parkside</option>
+        <option value="25"> Portola</option>
+        <option value="26"> Potrero</option>
+        <option value="27"> Presidio</option>
+        <option value="28"> Richmond</option>
+        <option value="29"> Sunset</option>
+        <option value="30"> Visitacion Valley</option>
+        <option value="31"> West Portal</option>
+        <option value="34"> Western Addition</option>
+      </select>
+      &nbsp;
+
+<span id="sort_cell">
+</span>
+
+<script type="text/JavaScript">
+<!-- Hide the JS
+initSort();
+// Unhide the JS -->
+</script>
+      <input type="hidden" name="SORT" value="D" /><input type="hidden" name="extended" value="0" />      <input type="submit" name="SUBMIT" value="Search" onclick='return searchtoolSubmitAction();' />
+<div>
+      <input type="checkbox" name="availlim" value="1"  /> <EM>Limit to available</EM><br/>
+</div>
+</form>
+<div></div></div>
+</div>
+
+<!-- END SEARCH WIDGET -->
+
+<table class="patronoptions">
+<tr><th>Your Library Record Options</th></tr>
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<a href="#" onClick="return open_new_window( '/patroninfo~S1/1234567/newpin' )">Modify your PIN</a>
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<a href="#" onClick="return open_new_window( '/patroninfo~S1/1234567/modpinfo' )">Modify Personal Information</a>
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<a href="/patroninfo~S1/1234567/items" target="_self">10 Items currently checked out</a>
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<a href="http://sfpl.org/index.php?pg=2000005001" target="_blank">My eBooks</a>
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<a href="/patroninfo~S1/1234567/getpsearches" target="_self">Preferred Searches</a>
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<b>
+<a href="/patroninfo~S1/1234567/searchcatalog" target="_self">Search the Catalog</a>
+</b>
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<a href="/patroninfo~S1/1234567/overdues" target="_self">$1.20 in unpaid fines and bills</a>
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<a href="/patroninfo~S1/1234567/patrate" target="_self">My Ratings</a>
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<a href="/patroninfo~S1/1234567/mylists" target="_self">My Lists</a>
+</td>
+</tr>
+
+<tr class="patFuncBtns">
+<td class="patFuncBtns">
+<a href="/patroninfo~S1/1234567/readinghistory" target="_self">My Check-out History</a>
+</td>
+
+</tr>
+
+
+<tr><td class="privacy">
+When you are done, please remember to use the Logout button. To 
+further enhance privacy, clear the browser history and cache, then exit 
+the program.
+</td></tr>
+</table>
+
+<div class="helpbox">
+	<h2>Helpful Resources</h2>
+	<ul>
+<li><a href="http://sfpl.org/index.php?pg=2000489201" target="blank">
+What is My Check-out History?</a>
+<li><a href="http://sfpl.org/index.php?pg=2000325601" target="blank">
+How can I receive text message alerts for overdue or reserved items?</a>
+<li><a href="http://sfpl.org/index.php?pg=2000081401" target="_blank">
+What do the different status categories mean in my requests (holds) list?</a></li>
+<li><a href="http://sfpl.org/index.php?pg=2000064401" target="_blank">
+What is a preferred search?</a></li>
+<li><a href="http://sfpl.org/index.php?pg=2000081401" target="_blank">
+How to "freeze" requests.</a></li>
+<li><a href="/screens/ratings.html#howtorate" target="_blank">
+How can I rate an item in the Library Catalog?</a></li>
+<li><a href="http://sfpl.org/index.php?pg=2000034401" target="_blank" 
+title="Frequently Asked Questions">View more Frequently Asked Questions</a></li>
+</ul>
+</div>
+
+</td>
+
+</tr>
+
+<tr>
+<td colspan="2">
+&nbsp;
+</td>
+</tr>
+
+</table>
+
+<table width="100%" align="center">
+<tr>
+<td align="left">
+<form name="hold_form" method="POST" id="hold_form" ><input type="HIDDEN" id="holdpagecmd" />
+
+<input type="SUBMIT" name="sortByRequest" value="Sort by Hold Requested Date" />
+<input type="HIDDEN" name="currentsortorder" value="current_pickup" />
+<a href="#"  onClick="return submitHold( 'requestCancelAll', 'requestCancelAll' )"><img src="/screens/pat_cancelall.gif" style="display: none;""" alt="CANCEL ALL" border="0" /></a>
+<a href="#"  onClick="return submitHold( 'requestUpdateHoldsSome', 'requestUpdateHoldsSome' )"><button>Update List</button><br /></a>
+<table border="0" class="patFunc"><tr class="patFuncTitle">
+<th colspan="7" class="patFuncTitle">
+4 HOLDS
+</th>
+</tr>
+
+<tr class="patFuncHeaders">
+<th class="patFuncHeaders"> CANCEL </th>
+<th class="patFuncHeaders"> TITLE </th>
+<th  class="patFuncHeaders"> Ratings </th>
+<th class="patFuncHeaders"> STATUS </th>
+<th class="patFuncHeaders">PICKUP LOCATION</th>
+<th class="patFuncHeaders"> CANCEL IF NOT FILLED BY </th>
+<th class="patFuncHeaders"> FREEZE </th>
+</tr>
+
+
+<style type="text/css">
+<!--
+#ratemy1    { display: inline }
+#rateneed1  { display: none }
+#ratemy2    { display: inline }
+#rateneed2  { display: none }
+#ratemy3    { display: inline }
+#rateneed3  { display: none }
+#ratemy4    { display: inline }
+#rateneed4  { display: none }
+-->
+</style>
+<tr class="patFuncEntry">
+<td  class="patFuncMark" align="center">
+<input type="checkbox" name="cancelb2689976x00" id="cancelb2689976x00" />
+</td>
+<td  class="patFuncTitle">
+<label for="cancelb2689976x00"><a href="/record=b2689976~S1"> Red Rising / Pierce Brown. </a></label>
+<br />
+</td>
+<td nowrap  class="patFuncRating">
+
+<span id="ratemy1"  onmouseover="setToolVisibility  ('ratemy1', 'none', 'rateneed1', 'inline')"><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 2 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 2 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 2 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 2 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 2 ratings" />
+</span>
+<span id="rateneed1"  onmouseout="setToolVisibility  ('ratemy1', 'inline', 'rateneed1', 'none')"><a href="/patroninfo~S1/1234567/sortedholds?changerating1=b2689976"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating2=b2689976"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating3=b2689976"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating4=b2689976"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating5=b2689976"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a>
+</span></td>
+<td  class="patFuncStatus"> 14 of 23 holds </td>
+<td class="patFuncPickup">
+<div  class="patFuncPickupLabel">
+<label for="locb2689976x00">Pickup Location</label></div>
+<select name=locb2689976x00 id=locb2689976x00 >
+<option value="a5+++" >ANZA BRANCH</option>
+<option value="b2+++" >BAYVIEW BRANCH</option>
+<option value="b4+++" >BERNAL HEIGHTS BRANCH</option>
+<option value="yjj++" >EARLY LITERACY MOBILE</option>
+<option value="c2+++" >CHINATOWN ADULT</option>
+<option value="c2j++" >CHINATOWN CHILDRENS</option>
+<option value="e7+++" >EUREKA VALLEY BRANCH</option>
+<option value="e9+++" >EXCELSIOR BRANCH</option>
+<option value="xffl+" >FRIENDS FOR LIFE</option>
+<option value="g4+++" >GLEN PARK BRANCH</option>
+<option value="g6+++" >GOLDEN GATE VALLEY BRANCH</option>
+<option value="yb4++" >GREEN BOOKMOBILE</option>
+<option value="i5+++" >INGLESIDE BRANCH</option>
+<option value="ylw++" >LIBRARY ON WHEELS</option>
+<option value="x++++" >MAIN LIBRARY HOLD SHELVES</option>
+<option value="m2+++" >MARINA BRANCH</option>
+<option value="m4+++" >MERCED BRANCH</option>
+<option value="m6+++" >MISSION BRANCH</option>
+<option value="m8   " selected="selected">MISSION BAY BRANCH</option>
+<option value="n4+++" >NOE VALLEY BRANCH</option>
+<option value="n6+++" >NORTH BEACH BRANCH</option>
+<option value="o2+++" >OCEAN VIEW BRANCH</option>
+<option value="o7+++" >ORTEGA BRANCH</option>
+<option value="p1+++" >PARK BRANCH</option>
+<option value="p3+++" >PARKSIDE BRANCH</option>
+<option value="p5+++" >PORTOLA BRANCH</option>
+<option value="p7+++" >POTRERO BRANCH</option>
+<option value="p9+++" >PRESIDIO BRANCH</option>
+<option value="r3+++" >RICHMOND ADULT</option>
+<option value="r3j++" >RICHMOND CHILDRENS</option>
+<option value="s7+++" >SUNSET ADULT</option>
+<option value="s7j++" >SUNSET CHILDRENS</option>
+<option value="yb2++" >TREASURE ISLAND BOOKMOBILE</option>
+<option value="v3+++" >VISITACION VALLEY BRANCH</option>
+<option value="w2+++" >WEST PORTAL BRANCH</option>
+<option value="w4+++" >WESTERN ADDITION</option>
+</select>
+</td>
+<td class="patFuncCancel">02-14-15</td>
+<td  class="patFuncFreeze" align="center">
+<div  class="patFuncFreezeLabel">
+<label for="freezeb2689976x00" >Freeze</label>
+</div>
+<input type="checkbox" name="freezeb2689976x00" /></td>
+</tr>
+
+<tr class="patFuncEntry">
+<td  class="patFuncMark" align="center">
+<input type="checkbox" name="cancelb2689958x01" id="cancelb2689958x01" />
+</td>
+<td  class="patFuncTitle">
+<label for="cancelb2689958x01"><a href="/record=b2689958~S1"> Shovel ready : a novel / Adam Sternbergh. </a></label>
+<br />
+</td>
+<td nowrap  class="patFuncRating">
+
+<span id="ratemy2"  onmouseover="setToolVisibility  ('ratemy2', 'none', 'rateneed2', 'inline')"><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 1 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 1 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 1 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 1 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 1 ratings" />
+</span>
+<span id="rateneed2"  onmouseout="setToolVisibility  ('ratemy2', 'inline', 'rateneed2', 'none')"><a href="/patroninfo~S1/1234567/sortedholds?changerating1=b2689958"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating2=b2689958"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating3=b2689958"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating4=b2689958"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating5=b2689958"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a>
+</span></td>
+<td  class="patFuncStatus"> 9 of 23 holds </td>
+<td class="patFuncPickup">
+<div  class="patFuncPickupLabel">
+<label for="locb2689958x01">Pickup Location</label></div>
+<select name=locb2689958x01 id=locb2689958x01 >
+<option value="a5+++" >ANZA BRANCH</option>
+<option value="b2+++" >BAYVIEW BRANCH</option>
+<option value="b4+++" >BERNAL HEIGHTS BRANCH</option>
+<option value="yjj++" >EARLY LITERACY MOBILE</option>
+<option value="c2+++" >CHINATOWN ADULT</option>
+<option value="c2j++" >CHINATOWN CHILDRENS</option>
+<option value="e7+++" >EUREKA VALLEY BRANCH</option>
+<option value="e9+++" >EXCELSIOR BRANCH</option>
+<option value="xffl+" >FRIENDS FOR LIFE</option>
+<option value="g4+++" >GLEN PARK BRANCH</option>
+<option value="g6+++" >GOLDEN GATE VALLEY BRANCH</option>
+<option value="yb4++" >GREEN BOOKMOBILE</option>
+<option value="i5+++" >INGLESIDE BRANCH</option>
+<option value="ylw++" >LIBRARY ON WHEELS</option>
+<option value="x++++" >MAIN LIBRARY HOLD SHELVES</option>
+<option value="m2+++" >MARINA BRANCH</option>
+<option value="m4+++" >MERCED BRANCH</option>
+<option value="m6+++" >MISSION BRANCH</option>
+<option value="m8   " selected="selected">MISSION BAY BRANCH</option>
+<option value="n4+++" >NOE VALLEY BRANCH</option>
+<option value="n6+++" >NORTH BEACH BRANCH</option>
+<option value="o2+++" >OCEAN VIEW BRANCH</option>
+<option value="o7+++" >ORTEGA BRANCH</option>
+<option value="p1+++" >PARK BRANCH</option>
+<option value="p3+++" >PARKSIDE BRANCH</option>
+<option value="p5+++" >PORTOLA BRANCH</option>
+<option value="p7+++" >POTRERO BRANCH</option>
+<option value="p9+++" >PRESIDIO BRANCH</option>
+<option value="r3+++" >RICHMOND ADULT</option>
+<option value="r3j++" >RICHMOND CHILDRENS</option>
+<option value="s7+++" >SUNSET ADULT</option>
+<option value="s7j++" >SUNSET CHILDRENS</option>
+<option value="yb2++" >TREASURE ISLAND BOOKMOBILE</option>
+<option value="v3+++" >VISITACION VALLEY BRANCH</option>
+<option value="w2+++" >WEST PORTAL BRANCH</option>
+<option value="w4+++" >WESTERN ADDITION</option>
+</select>
+</td>
+<td class="patFuncCancel">02-14-15</td>
+<td  class="patFuncFreeze" align="center">
+<div  class="patFuncFreezeLabel">
+<label for="freezeb2689958x01" >Freeze</label>
+</div>
+<input type="checkbox" name="freezeb2689958x01" /></td>
+</tr>
+
+<tr class="patFuncEntry">
+<td  class="patFuncMark" align="center">
+<input type="checkbox" name="cancelb2710931x02" id="cancelb2710931x02" />
+</td>
+<td  class="patFuncTitle">
+<label for="cancelb2710931x02"><a href="/record=b2710931~S1"> Plato at the Googleplex : why philosophy won't go away / Rebecca Newberger Goldstein. </a></label>
+<br />
+</td>
+<td nowrap  class="patFuncRating">
+
+<span id="ratemy3"  onmouseover="setToolVisibility  ('ratemy3', 'none', 'rateneed3', 'inline')"><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" />
+</span>
+<span id="rateneed3"  onmouseout="setToolVisibility  ('ratemy3', 'inline', 'rateneed3', 'none')"><a href="/patroninfo~S1/1234567/sortedholds?changerating1=b2710931"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating2=b2710931"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating3=b2710931"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating4=b2710931"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating5=b2710931"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a>
+</span></td>
+<td  class="patFuncStatus"> 5 of 26 holds </td>
+<td class="patFuncPickup">
+<div  class="patFuncPickupLabel">
+<label for="locb2710931x02">Pickup Location</label></div>
+<select name=locb2710931x02 id=locb2710931x02 >
+<option value="a5+++" >ANZA BRANCH</option>
+<option value="b2+++" >BAYVIEW BRANCH</option>
+<option value="b4+++" >BERNAL HEIGHTS BRANCH</option>
+<option value="yjj++" >EARLY LITERACY MOBILE</option>
+<option value="c2+++" >CHINATOWN ADULT</option>
+<option value="c2j++" >CHINATOWN CHILDRENS</option>
+<option value="e7+++" >EUREKA VALLEY BRANCH</option>
+<option value="e9+++" >EXCELSIOR BRANCH</option>
+<option value="xffl+" >FRIENDS FOR LIFE</option>
+<option value="g4+++" >GLEN PARK BRANCH</option>
+<option value="g6+++" >GOLDEN GATE VALLEY BRANCH</option>
+<option value="yb4++" >GREEN BOOKMOBILE</option>
+<option value="i5+++" >INGLESIDE BRANCH</option>
+<option value="ylw++" >LIBRARY ON WHEELS</option>
+<option value="x++++" >MAIN LIBRARY HOLD SHELVES</option>
+<option value="m2+++" >MARINA BRANCH</option>
+<option value="m4+++" >MERCED BRANCH</option>
+<option value="m6+++" >MISSION BRANCH</option>
+<option value="m8   " selected="selected">MISSION BAY BRANCH</option>
+<option value="n4+++" >NOE VALLEY BRANCH</option>
+<option value="n6+++" >NORTH BEACH BRANCH</option>
+<option value="o2+++" >OCEAN VIEW BRANCH</option>
+<option value="o7+++" >ORTEGA BRANCH</option>
+<option value="p1+++" >PARK BRANCH</option>
+<option value="p3+++" >PARKSIDE BRANCH</option>
+<option value="p5+++" >PORTOLA BRANCH</option>
+<option value="p7+++" >POTRERO BRANCH</option>
+<option value="p9+++" >PRESIDIO BRANCH</option>
+<option value="r3+++" >RICHMOND ADULT</option>
+<option value="r3j++" >RICHMOND CHILDRENS</option>
+<option value="s7+++" >SUNSET ADULT</option>
+<option value="s7j++" >SUNSET CHILDRENS</option>
+<option value="yb2++" >TREASURE ISLAND BOOKMOBILE</option>
+<option value="v3+++" >VISITACION VALLEY BRANCH</option>
+<option value="w2+++" >WEST PORTAL BRANCH</option>
+<option value="w4+++" >WESTERN ADDITION</option>
+</select>
+</td>
+<td class="patFuncCancel">03-09-15</td>
+<td  class="patFuncFreeze" align="center">
+<div  class="patFuncFreezeLabel">
+<label for="freezeb2710931x02" >Freeze</label>
+</div>
+<input type="checkbox" name="freezeb2710931x02" /></td>
+</tr>
+
+<tr class="patFuncEntry">
+<td  class="patFuncMark" align="center">
+<input type="checkbox" name="cancelb2725800x03" id="cancelb2725800x03" />
+</td>
+<td  class="patFuncTitle">
+<label for="cancelb2725800x03"><a href="/record=b2725800~S1"> Chance : a novel / Kem Nunn. </a></label>
+<br />
+</td>
+<td nowrap  class="patFuncRating">
+
+<span id="ratemy4"  onmouseover="setToolVisibility  ('ratemy4', 'none', 'rateneed4', 'inline')"><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 0 stars out of 5 based on 0 ratings" />
+</span>
+<span id="rateneed4"  onmouseout="setToolVisibility  ('ratemy4', 'inline', 'rateneed4', 'none')"><a href="/patroninfo~S1/1234567/sortedholds?changerating1=b2725800"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating2=b2725800"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating3=b2725800"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating4=b2725800"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a><a href="/patroninfo~S1/1234567/sortedholds?changerating5=b2725800"><img src="/screens/rate_need.gif" border="0" title="Rate this material!" /></a>
+</span></td>
+<td  class="patFuncStatus"> 66 of 68 holds </td>
+<td class="patFuncPickup">
+<div  class="patFuncPickupLabel">
+<label for="locb2725800x03">Pickup Location</label></div>
+<select name=locb2725800x03 id=locb2725800x03 >
+<option value="a5+++" >ANZA BRANCH</option>
+<option value="b2+++" >BAYVIEW BRANCH</option>
+<option value="b4+++" >BERNAL HEIGHTS BRANCH</option>
+<option value="yjj++" >EARLY LITERACY MOBILE</option>
+<option value="c2+++" >CHINATOWN ADULT</option>
+<option value="c2j++" >CHINATOWN CHILDRENS</option>
+<option value="e7+++" >EUREKA VALLEY BRANCH</option>
+<option value="e9+++" >EXCELSIOR BRANCH</option>
+<option value="xffl+" >FRIENDS FOR LIFE</option>
+<option value="g4+++" >GLEN PARK BRANCH</option>
+<option value="g6+++" >GOLDEN GATE VALLEY BRANCH</option>
+<option value="yb4++" >GREEN BOOKMOBILE</option>
+<option value="i5+++" >INGLESIDE BRANCH</option>
+<option value="ylw++" >LIBRARY ON WHEELS</option>
+<option value="x++++" >MAIN LIBRARY HOLD SHELVES</option>
+<option value="m2+++" >MARINA BRANCH</option>
+<option value="m4+++" >MERCED BRANCH</option>
+<option value="m6+++" >MISSION BRANCH</option>
+<option value="m8   " selected="selected">MISSION BAY BRANCH</option>
+<option value="n4+++" >NOE VALLEY BRANCH</option>
+<option value="n6+++" >NORTH BEACH BRANCH</option>
+<option value="o2+++" >OCEAN VIEW BRANCH</option>
+<option value="o7+++" >ORTEGA BRANCH</option>
+<option value="p1+++" >PARK BRANCH</option>
+<option value="p3+++" >PARKSIDE BRANCH</option>
+<option value="p5+++" >PORTOLA BRANCH</option>
+<option value="p7+++" >POTRERO BRANCH</option>
+<option value="p9+++" >PRESIDIO BRANCH</option>
+<option value="r3+++" >RICHMOND ADULT</option>
+<option value="r3j++" >RICHMOND CHILDRENS</option>
+<option value="s7+++" >SUNSET ADULT</option>
+<option value="s7j++" >SUNSET CHILDRENS</option>
+<option value="yb2++" >TREASURE ISLAND BOOKMOBILE</option>
+<option value="v3+++" >VISITACION VALLEY BRANCH</option>
+<option value="w2+++" >WEST PORTAL BRANCH</option>
+<option value="w4+++" >WESTERN ADDITION</option>
+</select>
+</td>
+<td class="patFuncCancel">03-17-15</td>
+<td  class="patFuncFreeze" align="center">
+<div  class="patFuncFreezeLabel">
+<label for="freezeb2725800x03" >Freeze</label>
+</div>
+<input type="checkbox" name="freezeb2725800x03" /></td>
+</tr>
+
+</table>
+
+<input type="SUBMIT" name="sortByRequest" value="Sort by Hold Requested Date" />
+<input type="HIDDEN" name="currentsortorder" value="current_pickup" />
+<a href="#"  onClick="return submitHold( 'requestCancelAll', 'requestCancelAll' )"><img src="/screens/pat_cancelall.gif" style="display: none;""" alt="CANCEL ALL" border="0" /></a>
+<a href="#"  onClick="return submitHold( 'requestUpdateHoldsSome', 'requestUpdateHoldsSome' )"><button>Update List</button><br /></a>
+</form></td>
+</tr>
+</table>
+
+ </div>
+</div>
+
+
+<br />
+<div id="footer" class="fineprint" align="left">
+<img src="/screens/city_seal.gif" 
+alt="City of San Francisco seal" width="44" height="44" 
+style="float:left;margin:7px;" /> <br />
+<a href="http://sfpl.org/index.php?pg=2000034301" 
+target="Resource_Window">Contact</a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000034401" 
+target="Resource_Window">FAQ</a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000001701" 
+target="Resource_Window">Ask A Librarian</a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000028601" 
+target="Resource_Window">Articles &amp; Databases</a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000004401" 
+target="Resource_Window">Suggest a Title </a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000031901"
+target="Resource_Window">Interlibrary Loan </a>
+<br />
+Copyright &copy; 2002-2014 San Francisco Public Library. All rights 
+reserved.&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000001301" 
+target="Resource_Window">Privacy policy</a>&nbsp;|&nbsp;Internet &amp; Computer 
+<a href="http://sfpl.org/index.php?pg=2000377401">Help/</a><a href="http://sfpl.org/index.php?pg=2000004301">Rules</a>		
+</div>
+
+
+</body>
+</html>
+<!--this is customized <screens/patronview_web.html>-->
