@@ -13,6 +13,7 @@ var HOLDS_PAGE = fs.readFileSync(__dirname + "/pages/holds.html").toString();
 var WORK_PAGE = fs.readFileSync(__dirname + "/pages/a-work.html").toString();
 var LIST_PAGE = fs.readFileSync(__dirname + "/pages/a-list.html").toString();
 var USERLISTS_PAGE = fs.readFileSync(__dirname + "/pages/mylists.html").toString();
+var CHECKOUTS_PAGE = fs.readFileSync(__dirname + "/pages/checkouts.html").toString();
 
 describe('Parse SFPL pages', function () {
 
@@ -76,6 +77,21 @@ describe('Parse SFPL pages', function () {
             done();
         });
     });
+
+    it('Checkouts page', function (done) {
+        sfpl.parseCheckoutsPage(CHECKOUTS_PAGE, function (err, items) {
+            should.not.exist(err);
+            should.exist(items);
+            items.length.should.equal(9);
+            items.forEach(function (checkout) {
+                checkout.should.have.property("title");
+                checkout.should.have.property("href");
+                checkout.should.have.property("status");
+            });
+            done();
+        });
+    });
+
 
     after(function (done) {
         done();
