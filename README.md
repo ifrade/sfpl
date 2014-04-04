@@ -54,7 +54,8 @@ List the books currently checked out by the user
 __Arguments__
 * `callback(err, books)` - function with an error if something went wrong and the list of
    books checked out. Each book is a JSON object with fields: `title`, `href` and `status`.
-   href can be used directly in the sfpl.getWorkCopies method.
+   href can be used directly in the sfpl.getWorkCopies method. status contains as string
+   the due date and other messages (renewed X times, fines).
 
 
 ### sfpl.listHolds(callback);
@@ -80,7 +81,7 @@ Returns the list of locations where the book is registered and its status: CHECK
 IN HOLDSHELF, DUE MM-DD-YYYY, and so on)
 
 __Arguments__
-* `workUrl` - string Url of the work, as it comes in the other calls (like listCheckouts). 
+* `workUrl` - string Url of the work, as it comes in the other calls (like [listCheckout](### sfpl.listCheckouts)). 
 * `callback(err, copies)` - function with an error if something went wrong and the list of
    copies for that book. Each item has a `location` (library name), `callno` (F STEIN) and
    `status` (CHECK SELF, DUE ..., MISSING, ...)
@@ -92,7 +93,7 @@ sfpl.listUserLists).
 
 __Arguments__
 * `callback(err, books)` - function with an error if something went wrong and the list of
-   books checked out. Each book is a JSON object with fields: `title`, `href` and `status`.
+   books in the list. Each book is a JSON object with fields: `title`, `href` and `status`.
    href can be used directly in the sfpl.getWorkCopies method.
 
 ### sfpl.getListContentsByListId(listId, callback);
@@ -101,11 +102,26 @@ the contents, returning similar results as sfpl.getListContents.
 
 __Arguments__
 * `callback(err, books)` - function with an error if something went wrong and the list of
-   books checked out. Each book is a JSON object with fields: `title`, `href` and `status`.
+   books in the list. Each book is a JSON object with fields: `title`, `href` and `status`.
    href can be used directly in the sfpl.getWorkCopies method.
+
 
 # Example
 
+```javascript
+var SFPL = require('sfpl');
+
+var sfpl = new SFPL();
+sfpl.login("2000xxxxyyyyzzzzz", "pin", function (err) {
+    sfpl.listCheckouts(function (err, books) {
+        books.forEach(function (book, i) {
+            console.log(i, "-", book.title, book.status);
+        });
+        sfpl.logout();
+    });
+
+});
+```
 
 # TODO
 
