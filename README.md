@@ -111,6 +111,8 @@ __Arguments__
 
 # Example
 
+List the checkout books of the user:
+
 ```javascript
 var SFPL = require('sfpl');
 
@@ -128,6 +130,9 @@ sfpl.login("2000xxxxyyyyzzzzz", "pin", function (err) {
     });
 });
 ```
+
+The [command line tool code](https://github.com/ifrade/sfpl/blob/master/bin/sfpl-cli.js)
+exercises most of the methods in the API.
 
 # TODO
 
