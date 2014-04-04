@@ -8,14 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "xxxxx/push/to/gitorious"
+    "url": "http://github.com/ifrade/sfpl.git"
   },
   "dependencies": {
     "request": "*",
     "jsdom": "*",
-    "should": "*",
-    "mocha": "*",
     "async": "*"
+  },
+  "devDependencies": {
+    "should": "*",
+    "mocha": "*"
   },
   "keywords": [
     "sfpl",
