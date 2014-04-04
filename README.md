@@ -48,7 +48,7 @@ __Arguments__
 Logs out the user (invalidates the cookies?) from the SFPL website.
 
 
-### sfpl.listCheckouts = function (callback);
+### sfpl.listCheckouts(callback);
 List the books currently checked out by the user
 
 __Arguments__
@@ -57,7 +57,7 @@ __Arguments__
    href can be used directly in the sfpl.getWorkCopies method.
 
 
-### sfpl.listHolds = function (callback) {
+### sfpl.listHolds(callback);
 Returns the requests (holds list) of the user with the status of its items.
 
 __Arguments__
@@ -66,7 +66,7 @@ __Arguments__
    href can be used directly in the sfpl.getWorkCopies method.
 
 
-### sfpl.listUserLists = function (callback) {
+### sfpl.listUserLists(callback);
 Returns the lists the user has created in the SFPL site.
 
 __Arguments__
@@ -75,7 +75,7 @@ __Arguments__
    directly in sfpl.getListContents to retrieve the items inside the list.
 
 
-### sfpl.getWorkCopies = function (workUrl, callback);
+### sfpl.getWorkCopies(workUrl, callback);
 Returns the list of locations where the book is registered and its status: CHECK SELF,
 IN HOLDSHELF, DUE MM-DD-YYYY, and so on)
 
@@ -86,7 +86,7 @@ __Arguments__
    `status` (CHECK SELF, DUE ..., MISSING, ...)
 
 
-### sfpl.getListContents = function (listUrl, callback);
+### sfpl.getListContents(listUrl, callback);
 Returns the works inside a certain list. The list is identified by its URL (as returned in 
 sfpl.listUserLists).
 
@@ -95,7 +95,7 @@ __Arguments__
    books checked out. Each book is a JSON object with fields: `title`, `href` and `status`.
    href can be used directly in the sfpl.getWorkCopies method.
 
-### sfpl.getListContentsByListId = function (listId, callback);
+### sfpl.getListContentsByListId(listId, callback);
 List id numbers are static, so if the id is known, this method can be used to retrieve
 the contents, returning similar results as sfpl.getListContents.
 
