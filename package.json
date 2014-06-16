@@ -13,7 +13,8 @@
   "dependencies": {
     "request": "*",
     "jsdom": "*",
-    "async": "*"
+    "async": "*",
+    "commander": "*"
   },
   "devDependencies": {
     "should": "*",

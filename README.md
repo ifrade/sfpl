@@ -18,7 +18,20 @@ San Francisco Public Library.
 ```bash 
 # Edit config file to set your user and pin
 $ vi ./bin/sfpl.config.json
-$ ./bin/sfpl-cli [holds|checkouts|lists]
+```
+
+There are two command line tools in bin/:
+
+* sfpl-cli.js to check holds, checkouts and lists
+```bash
+$ ./bin/sfpl-cli.js [holds|checkouts|lists]
+```
+
+* inLocation to check what books from a list are available in certain branch.
+ Get list ids with "sfpl-cli lists" command. Select branch with first word
+ of the branch name. E.g.:
+```bash
+$ ./bin/inLocation.js -l 12312 -b MARINA
 ```
 
 ## As library
