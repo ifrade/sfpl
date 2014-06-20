@@ -7,10 +7,13 @@
 /* jshint node: true */
 var fs = require('fs');
 var should = require('should');
+var nock = require('nock');
 var SFPL = require('../../lib/sfpl.js');
 
 var HOLDS_PAGE = fs.readFileSync(__dirname + "/pages/holds.html").toString();
 var WORK_PAGE = fs.readFileSync(__dirname + "/pages/a-work.html").toString();
+var WORK_WITH_MORE = fs.readFileSync(__dirname + "/pages/a-work-with-more.html").toString();
+var ALL_COPIES = fs.readFileSync(__dirname + "/pages/all-copies.html").toString();
 var LIST_PAGE = fs.readFileSync(__dirname + "/pages/a-list.html").toString();
 var USERLISTS_PAGE = fs.readFileSync(__dirname + "/pages/mylists.html").toString();
 var CHECKOUTS_PAGE = fs.readFileSync(__dirname + "/pages/checkouts.html").toString();
@@ -43,6 +46,42 @@ describe('Parse SFPL pages', function () {
             should.not.exist(err);
             should.exist(copies);
             copies.length.should.equal(8);
+            copies.forEach(function (copy) {
+                copy.should.have.property("location");
+                copy.should.have.property("callno");
+                copy.should.have.property("status");
+            });
+            done();
+        });
+    });
+
+    it('Work with more copies hidden', function (done) {
+        sfpl.parseFullCopiesList(ALL_COPIES, function (err, copies) {
+            should.not.exist(err);
+            should.exist(copies);
+            copies.length.should.equal(125);
+            copies.forEach(function (copy) {
+                copy.should.have.property("location");
+                copy.should.have.property("callno");
+                copy.should.have.property("status");
+            });
+            done();
+        });
+    });
+
+    it('Follow if more copies', function (done) {
+        var allCopies = nock("http://sflib1.sfpl.org/")
+            .post("/search~S1?/.b2735976/.b2735976/1,1,1,B/holdings~2735976&FF=&1,0,")
+            .reply(200, ALL_COPIES);
+
+        var workPage = nock("https://sflib1.sfpl.org/")
+            .get("/record/fake")
+            .reply(200, WORK_WITH_MORE);
+
+        sfpl.getWorkCopies("/record/fake", function (err, copies) {
+            should.not.exist(err);
+            should.exist(copies);
+            copies.length.should.equal(125);
             copies.forEach(function (copy) {
                 copy.should.have.property("location");
                 copy.should.have.property("callno");

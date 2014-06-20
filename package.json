@@ -18,7 +18,8 @@
   },
   "devDependencies": {
     "should": "*",
-    "mocha": "*"
+    "mocha": "*",
+    "nock": "*"
   },
   "keywords": [
     "sfpl",
