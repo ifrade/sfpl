@@ -65,6 +65,10 @@ async.waterfall([
         sfpl.login(username, pin, cb);
     },
     function (statusCode, cb) {//53282 <- 4 books   //46191 <- to borrow
+        if (!app.list) {
+            return cb(new Error("No list id supplied. Use -l flag."));
+        }
+
         console.log("2/4 - Getting works in list");
         sfpl.getListContentsByListId(app.list, cb);
     },
