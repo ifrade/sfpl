@@ -1,0 +1,1361 @@
+<html   dir="LTR">
+<head>
+<title>San Francisco Public Library                                     /All Locations</title>
+<base target="_self"/>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" />
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico" />
+<script type="text/javascript" src="/scripts/common.js"></script>
+<script type="text/javascript" src="/scripts/features.js"></script>
+<script type="text/javascript" src="/scripts/webbridge.js"></script>
+<script type="text/javascript" src="/scripts/elcontent.js"></script>
+<script type="text/JavaScript">
+<!-- Hide the JS
+startTimeout(6000000, "/");
+// -->
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="6000;URL=/" />
+</noscript>
+
+<script type="text/javascript" src="/screens/sfplScripts.js"></script>
+</head>
+<body bgcolor="#FFFFFF;" onLoad="sfplScripts();" >
+<table align="center" cellpadding="0" cellspacing="0" border="0" 
+summary="This table structures page content.">
+<tr> 
+<td colspan="2"> 
+<!-- header image, language links, and top navigation -->
+<table class="navigationtable" cellpadding="0" cellspacing="0" border="0" 
+summary="Table containing primary navigation and language options">
+
+<tr class="headerrow">
+<td colspan="4">
+<a href="http://sfpl.org/" title="San Francisco Public Library home page">
+
+<img src="/screens/background_header.jpg" border="0" vspace="0" hspace="0"
+alt="Go to the San Francisco Public Library home page" 
+width="950" height="79" /></a>
+<span class="fineprint" style="position: relative; top:-20px; left:250px;">
+<a href="http://sflib1.sfpl.org/search*spi">Espa&#241;ol</a>
+&nbsp;|&nbsp;
+<a href="http://sflib1.sfpl.org/search*cht">&#20013;&#25991;</a>
+</span>
+
+</td>
+</tr>              
+</table>
+
+<div align="center" class="navigationRow">
+<form>
+<a href="http://sflib1.sfpl.org:80/search"><img src="/screens/startover.gif" alt="Start Over" border="0" /></a>
+<a href="/search~S1/X?NOSRCH=mason%26dixon&SORT=D&SUBKEY=mason%26dixon"><img src="/screens/modify.gif" alt="Modify Search" border="0" /></a>
+<a href="https://csul.iii.com/search/X?mason%26dixon&SORT=D&backlink=https://sflib1.sfpl.org:443/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse"><img src="/screens/csul.gif "alt="Search Link+ Catalog" border="0"></a>
+<select name=HISTORY onChange="onSelectChange(this, '~S1')"><option value="">(Search History)</option>
+<OPTION VALUE="Xmason%26dixon&SORT=D&searchscope=1">Keyword: mason&dixon in View Entire Collection
+<option value="+/search~S1/X?mason%26dixon&SORT=D&clear_history">(Clear Search History)</option>
+<option value="+/">(End Search Session)</option>
+</select>
+<noscript>
+<h2>Search history function requires JavaScript.</h2>
+</noscript>
+</form>
+</div>
+
+<span><center>
+<a href="" onClick="return createResourceWindow('/webbridge~S1/panel?returnurl=%2Fsearch~S1%3F%2FXmason%2526dixon%26SORT%3DD%2FXmason%2526dixon%26SORT%3DD%26SUBKEY%3Dmason%2526dixon%2F1%252C44%252C44%252CB%2Fbrowse');">
+<img src="/screens/resourcelink.gif" alt="Other Resources" border="0" /></a>
+</center></span>
+<!-- BEGIN BROWSE SCREEN TABLE -->
+<table align="center" width="100%" cellpadding="2" cellspacing="0" border="0" class="browseScreen">
+<!-- BEGIN SEARCH WIDGET -->
+<div align="center">
+<tr align="center" valign="middle">
+<td valign="middle" colspan="2">
+<div  class="browseSearchtool">
+<script type="text/JavaScript">
+<!-- Hide the JS
+var savedScope;
+var savedTag;
+var savedSearch;
+var sortButtonText = null;
+var savedExactSearch = null;
+var sortButtonEvent = null;
+var sortExactBrowseURL = null;
+var sortTypes = new Array();
+var sortLabels = new Array();
+sortTypes[0] = "t";
+sortLabels[0] = "Title";
+sortTypes[1] = "a";
+sortLabels[1] = "Author";
+sortTypes[2] = "c";
+sortLabels[2] = "Year";
+sortTypes[3] = "r";
+sortLabels[3] = "Reverse Year";
+sortTypes[4] = "n";
+sortLabels[4] = "Call Number";
+sortTypes[5] = "m";
+sortLabels[5] = "Material Type";
+sortLabels[6] = "System Sorted";
+sortTypes[6] = "-";
+var sortSelectedValue = "6";
+var nonSortTags = "XYZprWw"
+// Unhide the JS -->
+</script>
+<form name="searchtool" target="_self" action="/search~S1/" method='GET'>
+      <label for="searchtype" style="display:none;">SearchType</label> <select name="searchtype" id="searchtype" onChange="initSort()">
+        <option value="X" selected="selected"> Keyword</option>
+        <option value="a"> Author</option>
+        <option value="t"> Title</option>
+        <option value="d"> Subject</option>
+        <option value="c"> Call No</option>
+      </select>
+      &nbsp;
+      <label for="searcharg" style="display:none;">Search</label><input type="text" name="searcharg" id="searcharg" size="30" onchange='return searchtoolSubmitAction()'maxlength="75" value="mason&amp;dixon" />
+      &nbsp;
+      <label for="searchscope" style="display:none;">Search Scope</label><select name="searchscope" id="searchscope">
+        <option value="1" selected="selected"> View Entire Collection</option>
+        <option value="33"> Adult/Teen Materials</option>
+        <option value="4"> Anza</option>
+        <option value="5"> Bayview</option>
+        <option value="6"> Bernal Heights</option>
+        <option value="32"> Branch Bookmobile 1</option>
+        <option value="7"> Children's Bookmobile</option>
+        <option value="2"> Children's Materials Only</option>
+        <option value="8"> Chinatown</option>
+        <option value="9"> Eureka Valley</option>
+        <option value="10"> Excelsior</option>
+        <option value="11"> Glen Park</option>
+        <option value="12"> Golden Gate Valley</option>
+        <option value="13"> Ingleside</option>
+        <option value="14"> Library on Wheels</option>
+        <option value="3"> Main Library</option>
+        <option value="15"> Marina</option>
+        <option value="16"> Merced</option>
+        <option value="17"> Mission</option>
+        <option value="18"> Mission Bay</option>
+        <option value="19"> Noe Valley</option>
+        <option value="20"> North Beach</option>
+        <option value="21"> Oceanview</option>
+        <option value="22"> Ortega</option>
+        <option value="23"> Park</option>
+        <option value="24"> Parkside</option>
+        <option value="25"> Portola</option>
+        <option value="26"> Potrero</option>
+        <option value="27"> Presidio</option>
+        <option value="28"> Richmond</option>
+        <option value="29"> Sunset</option>
+        <option value="30"> Visitacion Valley</option>
+        <option value="31"> West Portal</option>
+        <option value="34"> Western Addition</option>
+      </select>
+      &nbsp;
+
+<span id="sort_cell">
+</span>
+
+<script type="text/JavaScript">
+<!-- Hide the JS
+initSort();
+// Unhide the JS -->
+</script>
+      <input type="hidden" name="SORT" value="DZ" /><input type="hidden" name="extended" value="0" />      <input type="submit" name="SUBMIT" value="Search" onclick='return searchtoolSubmitAction();' />
+<div>
+      <input type="checkbox" name="availlim" value="1"  /> <EM>Limit to available</EM><br/>
+</div>
+<div>
+      <input type="hidden" name="searchlimits" value="" />
+      <input type="hidden" name="searchorigarg" value="Xmason&amp;dixon&SORT=D" />
+</div>
+</form>
+<div>
+<form action="/search~S1/X?" method="get" name="spellcheck" id="spellcheck">
+<input type="hidden" name="searchtype" value="X">
+<input type="hidden" name="searcharg" id="searchterms" value="">
+<input type="hidden" name="searchscope" value="1">
+<script type="text/javascript">
+function spell_submit(tool_type) {
+var i;
+var cnt = 0;
+var searchargs = getObj("searchterms");
+var obj = getObj("spellcheck");
+for (i = 0; i < obj.elements.length; i++ )
+    {
+    if( obj.elements[i].type == "select-one")
+        {
+        if (cnt == 0)
+        {
+        newterms = obj.elements[i].options[obj.elements[i].selectedIndex].value;
+        }
+        else
+        {
+        newterms = newterms + " " + obj.elements[i].options[obj.elements[i].selectedIndex].value;
+        }
+    	cnt++
+    	}
+    }
+searchargs.setAttribute('value',newterms);
+obj.submit();
+}
+function getObj(name) { 
+  if (document.getElementById) {
+      object = document.getElementById(name);
+  } else if (document.all) { 
+      object = document.all[name]; 
+  } else if (document.layers) { 
+      var object = document.layers[name]; 
+ }
+return object; 
+}
+function spell_change() { 
+var brief = getObj("spellcheck_brief");
+var more = getObj("spellcheck_more");
+more.style.display='block';
+brief.style.display='none';
+}
+</script>
+<div id="spellcheck_more" style="display : none;">
+<span class="spellcheckTool">Did you mean</span><b> <select name="words">
+<option value="Mason-Dixon">Mason-Dixon</option>
+<option value="Masonic">Masonic</option>
+<option value="mason">mason</option>
+<option value="Asuncion">Asuncion</option>
+<option value="masons">masons</option>
+<option value="abscond">abscond</option>
+<option value="ascension">ascension</option>
+<option value="astound">astound</option>
+<option value="ascensions">ascensions</option>
+</select>
+? </b> <a href="#" onclick="spell_submit(this);">&nbsp;<img src="/screens/search.gif"></a></div>
+<div id="spellcheck_brief" style="display : block;">
+<span class="spellcheckTool">Did you mean</span><b> <a href="#" onclick="spell_submit(this);">Mason-Dixon</a>? </b> <a href="#" onclick="spell_change();"><span class="spellcheckToolMore">More Options</span></a></div></form></div>
+<div  class="browseSearchtoolMessage">       <i>44 results found. </i>Sorted by  <strong>relevance</strong>  | <a href="/search~S1/X?mason%26dixon&SORT=DX">date</a>  | <a href="/search~S1/X?mason%26dixon&SORT=AX">title</a> .
+</div>
+<div></div></div>
+
+</td>
+</tr>
+</div>
+<!-- END SEARCH WIDGET -->
+
+<!-- BEGIN BROWSE PAGER -->
+<!-- begin page widgit -->
+<tr  class="browsePager"><td align="center"  class="browsePager" colspan="5">
+
+Result Page&nbsp;&nbsp;&nbsp;<strong>1</strong>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/13%2C44%2C44%2CB/browse">2</a>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/25%2C44%2C44%2CB/browse">3</a>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/37%2C44%2C44%2CB/browse">4</a>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/13%2C44%2C44%2CB/browse">Next</a>
+<!-- end page widgit -->
+</td>
+<td>&nbsp;</td>
+</tr>
+<!-- END BROWSE PAGER -->
+
+<style type="text/css">
+<!--
+#rategroup1 { display: inline }
+#rateneed1  { display: none }
+#rategroupMy1 { display: none }
+#ratemy1      { display: inline }
+#rategroup2 { display: inline }
+#rateneed2  { display: none }
+#rategroupMy2 { display: none }
+#ratemy2      { display: inline }
+#rategroup3 { display: inline }
+#rateneed3  { display: none }
+#rategroupMy3 { display: none }
+#ratemy3      { display: inline }
+#rategroup4 { display: inline }
+#rateneed4  { display: none }
+#rategroupMy4 { display: none }
+#ratemy4      { display: inline }
+#rategroup5 { display: inline }
+#rateneed5  { display: none }
+#rategroupMy5 { display: none }
+#ratemy5      { display: inline }
+#rategroup6 { display: inline }
+#rateneed6  { display: none }
+#rategroupMy6 { display: none }
+#ratemy6      { display: inline }
+#rategroup7 { display: inline }
+#rateneed7  { display: none }
+#rategroupMy7 { display: none }
+#ratemy7      { display: inline }
+#rategroup8 { display: inline }
+#rateneed8  { display: none }
+#rategroupMy8 { display: none }
+#ratemy8      { display: inline }
+#rategroup9 { display: inline }
+#rateneed9  { display: none }
+#rategroupMy9 { display: none }
+#ratemy9      { display: inline }
+#rategroup10 { display: inline }
+#rateneed10  { display: none }
+#rategroupMy10 { display: none }
+#ratemy10      { display: inline }
+#rategroup11 { display: inline }
+#rateneed11  { display: none }
+#rategroupMy11 { display: none }
+#ratemy11      { display: inline }
+#rategroup12 { display: inline }
+#rateneed12  { display: none }
+#rategroupMy12 { display: none }
+#ratemy12      { display: inline }
+-->
+</style>
+<!-- BEGIN BROWSE SCREEN LEFT CELL: BROWSELIST/BRIEFCIT AREA -->
+<tr><td>
+<table id="briefcit_table" align="center" border="0" bordercolor="339999" width="100%">
+<tr align="CENTER" valign="MIDDLE">
+<td colspan="5" class="browseSaveJump">
+<form method="POST" action="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse" name="export_form" id="export_form" >
+<input type="hidden" name="jumpref" value="Xmason%26dixon">
+<input type="hidden" id="save_func" name="save_func" value=""/>
+<a href="#" onclick="process_save(0);" style="text-decoration:none">
+<img src="/screens/savemarked.gif" alt="Save marked records" border="0" /></a>
+<span name='save_page_btn1' id='save_page_btn1' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none">
+<img src="/screens/saveallpage.gif" alt="Save all on page" border="0" /></a>
+</span>
+<span name='mylist_btn1' id='mylist_btn1' style='visibility: visible' ><a href="#" onclick="save_to_mylist();">
+<img src="/screens/save-to-list.gif" alt="Save to List" border=0 /></a>
+</span>
+</td></tr>
+
+
+</td>
+</tr>
+<tr  class="browseHeader">
+<td align="center" class="browseHeaderData">
+Keyword (1-12 of 44)
+</td>
+</tr>
+<!-- Right Result rank 1 -->
+<tr  class="browseSuperEntry browseEntryRelGroup1"><td colspan="1"><img src="/screens/relevance5.gif" alt="">&nbsp;Most relevant titles&nbsp;entries 1-10</td></tr>
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_1'></a> 1		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b2675944" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=9780375899607/index.html&client=sfpl&upc=&oclc=ocn774717407&type=rn12" target="_parent"><img src="/bookjacket?recid=b2675944&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&1%2C1%2C">Mason Dixon [electronic resource] : basketball disasters / by Claudia Mills.</a>				</td>
+</tr>
+			<tr>
+				<td>
+Mills, Claudia.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York, N.Y. : Alfred A. Knopf Books for Young Readers, 2012.				</td>
+			</tr>
+			<tr>
+				<td>
+1 online resource : ill.				</td>
+			</tr>
+			<tr>
+
+				<td>
+				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+<a href="http://sfpl.lib.overdrive.com/ContentDetails.htm?ID=56A149E5-7934-483B-A779-DC3EF0CCC85B" onclick="window.open('http://sfpl.lib.overdrive.com/ContentDetails.htm?ID=56A149E5-7934-483B-A779-DC3EF0CCC85B'); return false;">Digital Media</a><br />
+<tr><td>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&1%2C1%2C">More...</a></td></tr>
+</td>
+</tr>
+
+<td>
+
+<span id="rategroup1"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_1"><img src="/screens/rate_no.gif" border="0" title="No one has rated this material" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+2012.<br /><br />
+ <img src="/screens/media_ebook.gif" alt="EBOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&1%2C1%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_2'></a> 2		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b2478872" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=9780375868757/index.html&client=sfpl&upc=&oclc=++2011014249&type=rn12" target="_parent"><img src="/bookjacket?recid=b2478872&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&2%2C2%2C">Mason Dixon : basketball disasters / Claudia Mills ; illustrated by Guy Francis.</a>				</td>
+</tr>
+			<tr>
+				<td>
+Mills, Claudia.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York : Alfred A. Knopf, c2012.				</td>
+			</tr>
+			<tr>
+				<td>
+167 p. : ill. ; 22 cm.				</td>
+			</tr>
+			<tr>
+
+				<td>
+jF MILL				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+&nbsp;</td>
+</tr>
+
+<td>
+
+<span id="rategroup2"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_2"><img src="/screens/rate_no.gif" border="0" title="No one has rated this material" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+c2012.<br /><br />
+ <img src="/screens/media_book.gif" alt="BOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&2%2C2%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_3'></a> 3		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b2675872" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=9780375899591/index.html&client=sfpl&upc=&oclc=ocn773826721&type=rn12" target="_parent"><img src="/bookjacket?recid=b2675872&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&3%2C3%2C">Mason Dixon [electronic resource] : fourth-grade disasters / Claudia Mills ; illustrated by Guy Fran</a>				</td>
+</tr>
+			<tr>
+				<td>
+Mills, Claudia.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York : Alfred A. Knopf, c2011.				</td>
+			</tr>
+			<tr>
+				<td>
+1 online resource : ill.				</td>
+			</tr>
+			<tr>
+
+				<td>
+				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+<a href="http://sfpl.lib.overdrive.com/ContentDetails.htm?ID=11DA10F4-965C-412B-A08C-854958C739E0" onclick="window.open('http://sfpl.lib.overdrive.com/ContentDetails.htm?ID=11DA10F4-965C-412B-A08C-854958C739E0'); return false;">Digital Media</a><br />
+<tr><td>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&3%2C3%2C">More...</a></td></tr>
+</td>
+</tr>
+
+<td>
+
+<span id="rategroup3"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_3"><img src="/screens/rate_no.gif" border="0" title="No one has rated this material" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+c2011.<br /><br />
+ <img src="/screens/media_ebook.gif" alt="EBOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&3%2C3%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_4'></a> 4		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b2477741" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=9780375868740/index.html&client=sfpl&upc=&oclc=ocn759366613&type=rn12" target="_parent"><img src="/bookjacket?recid=b2477741&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&4%2C4%2C">Mason Dixon : fourth grade disasters / Claudia Mills ; illustrated by Guy Francis.</a>				</td>
+</tr>
+			<tr>
+				<td>
+Mills, Claudia.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York : Alfred A. Knopf, c2011.				</td>
+			</tr>
+			<tr>
+				<td>
+157 p. : ill. ; 22 cm.				</td>
+			</tr>
+			<tr>
+
+				<td>
+jF MILL				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+&nbsp;</td>
+</tr>
+
+<td>
+
+<span id="rategroup4"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_4"><img src="/screens/rate_no.gif" border="0" title="No one has rated this material" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+c2011.<br /><br />
+ <img src="/screens/media_book.gif" alt="BOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&4%2C4%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_5'></a> 5		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b2173810" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=9780307381705/index.html&client=sfpl&upc=&oclc=ocn247012526&type=rn12" target="_parent"><img src="/bookjacket?recid=b2173810&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&5%2C5%2C">Mason-Dixon knitting outside the lines : patterns, stories, pictures, true confessions, tricky bits,</a>				</td>
+</tr>
+			<tr>
+				<td>
+Gardiner, Kay.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York : Potter Craft ; c2008.				</td>
+			</tr>
+			<tr>
+				<td>
+159 p. : ill. (chiefly col.) ; 29 cm.				</td>
+			</tr>
+			<tr>
+
+				<td>
+746.432 G168mo				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+&nbsp;</td>
+</tr>
+
+<td>
+
+<span id="rategroup5"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_5"><img src="/screens/rate_group.gif" border="0" title="Rated 4 stars out of 5 based on 2 ratings" /><img src="/screens/rate_group.gif" border="0" title="Rated 4 stars out of 5 based on 2 ratings" /><img src="/screens/rate_group.gif" border="0" title="Rated 4 stars out of 5 based on 2 ratings" /><img src="/screens/rate_group.gif" border="0" title="Rated 4 stars out of 5 based on 2 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 4 stars out of 5 based on 2 ratings" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+c2008.<br /><br />
+ <img src="/screens/media_book.gif" alt="BOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&5%2C5%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_6'></a> 6		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b2022475" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=0307236056/index.html&client=sfpl&upc=9780307236050&oclc=ocm65192327+&type=rn12" target="_parent"><img src="/bookjacket?recid=b2022475&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&6%2C6%2C">Mason-Dixon knitting : the curious knitters' guide : stories, patterns, advice, opinions, questions,</a>				</td>
+</tr>
+			<tr>
+				<td>
+Gardiner, Kay.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York : Potter Craft, c2006.				</td>
+			</tr>
+			<tr>
+				<td>
+160 p. : col. ill. ; 29 cm.				</td>
+			</tr>
+			<tr>
+
+				<td>
+746.432 G168m				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+&nbsp;</td>
+</tr>
+
+<td>
+
+<span id="rategroup6"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_6"><img src="/screens/rate_group.gif" border="0" title="Rated 3 stars out of 5 based on 2 ratings" /><img src="/screens/rate_group.gif" border="0" title="Rated 3 stars out of 5 based on 2 ratings" /><img src="/screens/rate_group.gif" border="0" title="Rated 3 stars out of 5 based on 2 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 3 stars out of 5 based on 2 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 3 stars out of 5 based on 2 ratings" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+c2006.<br /><br />
+ <img src="/screens/media_book.gif" alt="BOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&6%2C6%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_7'></a> 7		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b1576863" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=0312423209/index.html&client=sfpl&upc=&oclc=aew-ocm00005689++++&type=rn12" target="_parent"><img src="/bookjacket?recid=b1576863&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&7%2C7%2C">Mason & Dixon / Thomas Pynchon.</a>				</td>
+</tr>
+			<tr>
+				<td>
+Pynchon, Thomas.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York : Henry Holt, c1997.				</td>
+			</tr>
+			<tr>
+				<td>
+773 p. ; 25 cm.				</td>
+			</tr>
+			<tr>
+
+				<td>
+F PYNCHON				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+&nbsp;</td>
+</tr>
+
+<td>
+
+<span id="rategroup7"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_7"><img src="/screens/rate_group.gif" border="0" title="Rated 4 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group.gif" border="0" title="Rated 4 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group.gif" border="0" title="Rated 4 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group.gif" border="0" title="Rated 4 stars out of 5 based on 1 ratings" /><img src="/screens/rate_pad.gif" border="0" title="Rated 4 stars out of 5 based on 1 ratings" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+c1997.<br /><br />
+ <img src="/screens/media_book.gif" alt="BOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&7%2C7%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_8'></a> 8		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b1382103" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=/index.html&client=sfpl&upc=&oclc=rlincsfx91-cocm00000886&type=rn12" target="_parent"><img src="/bookjacket?recid=b1382103&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&8%2C8%2C">I'm all bound 'round with the Mason Dixon Line / words by Sam M. Lewis & Joe Young ; music by Jean S</a>				</td>
+</tr>
+			<tr>
+				<td>
+Schwartz, Jean, 1878-1956.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York : Waterson, Berlin & Snyder, c1917.				</td>
+			</tr>
+			<tr>
+				<td>
+1 score (3 p.) ; 35 cm.				</td>
+			</tr>
+			<tr>
+
+				<td>
+784.8 HP1900:11 SCORE				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+&nbsp;</td>
+</tr>
+
+<td>
+
+<span id="rategroup8"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_8"><img src="/screens/rate_no.gif" border="0" title="No one has rated this material" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+c1917.<br /><br />
+ <img src="/screens/media_music.gif" alt="MUSIC SCORE"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&8%2C8%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_9'></a> 9		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b1383678" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=/index.html&client=sfpl&upc=&oclc=rlincsfx91-cocm00002525&type=rn12" target="_parent"><img src="/bookjacket?recid=b1383678&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&9%2C9%2C">'Cross the Mason-Dixon Line / words by Stanley Murphy ; music by Henry I. Marshall.</a>				</td>
+</tr>
+			<tr>
+				<td>
+Marshall, Henry I.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York : Jerome H. Remick & Co., c1913.				</td>
+			</tr>
+			<tr>
+				<td>
+1 score (5 p.) ; 35 cm.				</td>
+			</tr>
+			<tr>
+
+				<td>
+784.8 HP1910:10 SCORE				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+&nbsp;</td>
+</tr>
+
+<td>
+
+<span id="rategroup9"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_9"><img src="/screens/rate_no.gif" border="0" title="No one has rated this material" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+c1913.<br /><br />
+ <img src="/screens/media_music.gif" alt="MUSIC SCORE"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&9%2C9%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_10'></a> 10		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b2778523" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=9780763670368/index.html&client=sfpl&upc=&oclc=bk0014652577&type=rn12" target="_parent"><img src="/bookjacket?recid=b2778523&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&10%2C10%2C">Boundaries : How the Mason-Dixon Line Settled a Family Feud and Divided a Nation</a>				</td>
+</tr>
+			<tr>
+				<td>
+Walker, Sally M.				</td>
+			</tr>
+
+			<tr>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+1 online resource				</td>
+			</tr>
+			<tr>
+
+				<td>
+				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+<a href="http://sfpl.axis360.baker-taylor.com/Title?itemid=0014652577" onclick="window.open('http://sfpl.axis360.baker-taylor.com/Title?itemid=0014652577'); return false;">Digital Media</a><br />
+</td>
+</tr>
+
+<td>
+
+<span id="rategroup10"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_10"><img src="/screens/rate_no.gif" border="0" title="No one has rated this material" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+<br /><br />
+ <img src="/screens/media_ebook.gif" alt="EBOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&10%2C10%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<!-- Right Result rank 2 -->
+<tr  class="browseSuperEntry browseEntryRelGroup2"><td colspan="1"><img src="/screens/relevance4.gif" alt="">&nbsp;Highly relevant titles&nbsp;entries 11-15</td></tr>
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_11'></a> 11		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b2741191" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=0763656127/index.html&client=sfpl&upc=&oclc=1740479&type=rn12" target="_parent"><img src="/bookjacket?recid=b2741191&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&11%2C11%2C">Boundaries : how the Mason-Dixon Line settled a family feud & divided a nation / Sally M. Walker.</a>				</td>
+</tr>
+			<tr>
+				<td>
+Walker, Sally M.				</td>
+			</tr>
+
+			<tr>
+				<td>
+New York : Candlewick Press, 2014.				</td>
+			</tr>
+			<tr>
+				<td>
+202 p. : ill., maps. ; 27  cm				</td>
+			</tr>
+			<tr>
+
+				<td>
+j974.8 WALK				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+&nbsp;</td>
+</tr>
+
+<td>
+
+<span id="rategroup11"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_11"><img src="/screens/rate_no.gif" border="0" title="No one has rated this material" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+2014.<br /><br />
+ <img src="/screens/media_book.gif" alt="BOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&11%2C11%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr class="briefCitRow">
+  <td>
+ <table align="center" cellpadding="5" width="950">
+    <tr>
+      <td align="center" width="5%">
+        <strong>
+<a name='anchor_12'></a> 12		</strong>
+
+<br /><br />
+
+<img src="/screens/icon_bookbag.gif" border="0" alt="Select item / 選擇此項 " width="23" height="34" />
+
+<input type="checkbox" 
+name="save" value="b1788625" >
+      </td>
+      <td align="center" valign="top" width="15%">
+<a href="http://www.syndetics.com/index.aspx?isbn=0966803035/index.html&client=sfpl&upc=&oclc=ocm49905806&type=rn12" target="_parent"><img src="/bookjacket?recid=b1788625&size=0" border="0" alt="book jacket"></a>      </td>
+	  <td align="left" valign="top" width="65%">
+	  	<table>
+			<tr>
+
+				<td>
+<!--{nohitmsg}-->
+
+
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&12%2C12%2C">Rhinestone country : a novel about closeted lives south of the Mason-Dixon line / by Darwin Porter.</a>				</td>
+</tr>
+			<tr>
+				<td>
+Porter, Darwin.				</td>
+			</tr>
+
+			<tr>
+				<td>
+Staten Island, NY : Georgia Literary Association, 2002.				</td>
+			</tr>
+			<tr>
+				<td>
+570 p. ; 23 cm.				</td>
+			</tr>
+			<tr>
+
+				<td>
+F Porter D				</td>
+			</tr>
+			<tr>
+<tr>
+<td>
+&nbsp;</td>
+</tr>
+
+<td>
+
+<span id="rategroup12"><a href="/patroninfo~S1/0/redirect=/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse#anchor_12"><img src="/screens/rate_no.gif" border="0" title="No one has rated this material" /></a>
+
+</span><span class="ratingslink_briefcit"><a href="/screens/ratings.html" title="Explanation of ratings">Ratings?</a></span>
+</td>
+</tr>
+</table>
+
+</td>
+<td align="center" valign="middle" width="15%">
+2002.<br /><br />
+ <img src="/screens/media_book.gif" alt="BOOK"><p class="detail">
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/frameset&FF=Xmason%26dixon&SORT=D&12%2C12%2C"><img src="/screens/isitavailable.gif" alt="Is it available?" border="0" /></a></p>
+      </td>
+      </tr>
+    </table>
+  </td>
+
+</tr>
+<!--this is customized <screens/briefcit.html>-->
+<!--this is customized <screens/briefcit.html>-->
+<tr align="CENTER" valign="MIDDLE">
+<td colspan="5" class="browseSaveJump">
+<a href="#" onclick="process_save(0);" style="text-decoration:none">
+<img src="/screens/savemarked.gif" alt="Save marked records" border="0" /></a>
+<span name='save_page_btn2' id='save_page_btn2' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none">
+<img src="/screens/saveallpage.gif" alt="Save all on page" border="0" /></a>
+</span>
+</form>
+
+<form action="/search~S1/X?mason%26dixon&SORT=D" method="POST">
+<input type="HIDDEN" name="jumpref" value="Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse">
+<script type="text/JavaScript">
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+obj.submit();
+}
+</script>
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><img src="/screens/locateinresults.gif" alt="Locate in results" border="0" /></a>
+
+
+
+<script type="text/JavaScript">
+
+//getFormHandleForm() is in common.js
+var evtobj = getFormHandleForm(1);
+if (document.layers)
+    {
+    document.captureEvents(Event.KEYUP);
+    }
+document.onkeyup = function(evt)
+{
+if (!evt) evt = window.event;
+var keyCode;
+if (evt.which) keyCode = evt.which;
+else if (evt.keyCode) keyCode = evt.keyCode;
+var targ;
+if (evt.target) targ = evt.target;
+else if (evt.srcElement) targ = evt.srcElement;
+if (targ.nodeType == 3) //for Safari bug
+    targ = targ.parentNode;
+if (targ.form)
+    {
+    targ = targ.form;
+    //alert('targ='+targ+'  evtobj='+evtobj);
+    if (keyCode == 13 && targ == evtobj)
+        {
+        iiiDoSubmit_1();
+        }
+    }
+};
+
+</script>
+<input type="TEXT" name="jumpto" value="44" size="2" maxlength="2">
+</form>
+
+</td></tr>
+
+
+</td>
+</tr>
+</table>
+<!-- END BROWSELIST/BRIEFCIT AREA -->
+</td>
+<!-- END BROWSE SCREEN LEFT CELL -->
+
+<!-- BEGIN BROWSE SCREEN RIGHT CELL -->
+<td valign="top" width="0%">
+<div valign="top" rowspan="2"  class="browseResourceTable">
+
+<!-- BEGIN RESOURCE TABLE -->
+<table width="100%"  class="browseResourceTable" cellpadding="0" cellspacing="0" border="0">
+</table>
+<!-- END RESOURCE TABLE -->
+
+</div>
+
+</td>
+<!-- END BROWSE SCREEN RIGHT CELL -->
+</tr>
+
+<!-- BEGIN BOTTOM BROWSE PAGER -->
+<!-- begin page widgit -->
+<tr  class="browsePager"><td align="center"  class="browsePager" colspan="5">
+
+Result Page&nbsp;&nbsp;&nbsp;<strong>1</strong>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/13%2C44%2C44%2CB/browse">2</a>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/25%2C44%2C44%2CB/browse">3</a>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/37%2C44%2C44%2CB/browse">4</a>
+<a href="/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/13%2C44%2C44%2CB/browse">Next</a>
+<!-- end page widgit -->
+</td>
+<td>&nbsp;</td>
+</tr>
+<!-- END BOTTOM BROWSE PAGER -->
+</table>
+<!-- END BROWSE SCREEN TABLE -->
+<div align="center" class="navigationRow">
+<form>
+<a href="http://sflib1.sfpl.org:80/search"><img src="/screens/startover.gif" alt="Start Over" border="0" /></a>
+<a href="/search~S1/X?NOSRCH=mason%26dixon&SORT=D&SUBKEY=mason%26dixon"><img src="/screens/modify.gif" alt="Modify Search" border="0" /></a>
+<a href="https://csul.iii.com/search/X?mason%26dixon&SORT=D&backlink=https://sflib1.sfpl.org:443/search~S1?/Xmason%26dixon&SORT=D/Xmason%26dixon&SORT=D&SUBKEY=mason%26dixon/1%2C44%2C44%2CB/browse"><img src="/screens/csul.gif "alt="Search Link+ Catalog" border="0"></a>
+<select name=HISTORY onChange="onSelectChange(this, '~S1')"><option value="">(Search History)</option>
+<OPTION VALUE="Xmason%26dixon&SORT=D&searchscope=1">Keyword: mason&dixon in View Entire Collection
+<option value="+/search~S1/X?mason%26dixon&SORT=D&clear_history">(Clear Search History)</option>
+<option value="+/">(End Search Session)</option>
+</select>
+</form>
+</div>
+
+
+<div id="footer" class="fineprint" align="left">
+<img src="/screens/city_seal.gif" 
+alt="City of San Francisco seal" width="44" height="44" 
+style="float:left;margin:7px;" /> <br />
+<a href="http://sfpl.org/index.php?pg=2000034301" 
+target="Resource_Window">Contact</a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000034401" 
+target="Resource_Window">FAQ</a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000001701" 
+target="Resource_Window">Ask A Librarian</a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000028601" 
+target="Resource_Window">Articles &amp; Databases</a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000004401" 
+target="Resource_Window">Suggest a Title </a>&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000031901"
+target="Resource_Window">Interlibrary Loan </a>
+<br />
+Copyright &copy; 2002-2014 San Francisco Public Library. All rights 
+reserved.&nbsp;|&nbsp;
+<a href="http://sfpl.org/index.php?pg=2000001301" 
+target="Resource_Window">Privacy policy</a>&nbsp;|&nbsp;Internet &amp; Computer 
+<a href="http://sfpl.org/index.php?pg=2000377401">Help/</a><a href="http://sfpl.org/index.php?pg=2000004301">Rules</a>		
+</div>
+
+
+</body>
+</html>

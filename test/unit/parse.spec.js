@@ -17,6 +17,7 @@ var ALL_COPIES = fs.readFileSync(__dirname + "/pages/all-copies.html").toString(
 var LIST_PAGE = fs.readFileSync(__dirname + "/pages/a-list.html").toString();
 var USERLISTS_PAGE = fs.readFileSync(__dirname + "/pages/mylists.html").toString();
 var CHECKOUTS_PAGE = fs.readFileSync(__dirname + "/pages/checkouts.html").toString();
+var SEARCH_RESULTS_PAGE = fs.readFileSync(__dirname + "/pages/search-mason-dixon.html").toString();
 
 describe('Parse SFPL pages', function () {
 
@@ -131,6 +132,26 @@ describe('Parse SFPL pages', function () {
         });
     });
 
+    it('Search results page', function (done) {
+        sfpl.parseSearchResultsPage(SEARCH_RESULTS_PAGE, function (err, items) {
+            should.not.exist(err);
+            should.exist(items);
+            items.length.should.equal(12);
+            items.forEach(function (sResult) {
+                sResult.should.have.property("title");
+                sResult.should.have.property("href");
+                sResult.should.have.property("type");
+                sResult.should.have.property("callno");
+            });
+
+            items[6].title.should.equal("Mason & Dixon / Thomas Pynchon.");
+            items[6].href.should.equal("https://sflib1.sfpl.org/record=b1576863");
+            items[6].type.should.equal("BOOK");
+            items[6].callno.should.equal("F PYNCHON");
+
+            done();
+        });
+    });
 
     after(function (done) {
         done();

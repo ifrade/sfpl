@@ -24,7 +24,7 @@ There are two command line tools in bin/:
 
 * sfpl-cli.js to check holds, checkouts and lists
 ```bash
-$ ./bin/sfpl-cli.js [holds|checkouts|lists]
+$ ./bin/sfpl-cli.js [holds|checkouts|lists|search]
 ```
 
 * inLocation to check what books from a list are available in certain branch.
@@ -120,6 +120,18 @@ __Arguments__
 * `callback(err, books)` - function with an error if something went wrong and the list of
    books in the list. Each book is a JSON object with fields: `title`, `href` and `status`.
    href can be used directly in the sfpl.getWorkCopies method.
+
+### sfpl.search(query, callback);
+Free text search. Query can be a title, author or ISBN. It returns a JSON object with
+fields `title`, `href`, `type`, `callno` and `cover`.
+
+__Arguments__
+* `query` - string Words to search, like title, author name or ISBN. What user would write
+   in the search box in the web page.
+* `callback(err, results)` - function with an error if something went wrong and the list of
+   search results in the list. Each result is a JSON object with fields: `title`, `href`
+   (to the work, can be used with [getWorkCopies](#sfplgetworkcopiesworkurl-callback)),
+   `type` (Book, Audio CD, ...), `callno`, and `cover` (the URL of the cover image).
 
 
 # Example
