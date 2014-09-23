@@ -31,6 +31,7 @@ function usage() {
     console.log("    holds");
     console.log("    lists");
     console.log("    list [listid]");
+    console.log("    search \"title, author or ISBN\"");
 }
 
 if (argv._.length === 0) {
@@ -41,7 +42,8 @@ if (argv._.length === 0) {
 var validCommands = { "checkouts": 1,
                       "holds": 1,
                       "lists": 1,
-                      "list": 1 };
+                      "list": 1,
+                      "search": 1};
 
 var command = argv._[0];
 if (!validCommands[command]) {
@@ -56,12 +58,18 @@ if (command === 'list') {
     }
 }
 
+if (command === 'search' && argv._.length !== 2) {
+    usage();
+    process.exit(-1);
+}
+
 var sfpl = new SFPL();
 
 
 async.series([
     function (cb) {
         console.log("Login");
+        //if (command === 'search') { return cb(); }
         sfpl.login(config.user, config.pin, cb);
     },
     function (cb) {
@@ -99,6 +107,14 @@ async.series([
                 cb();
             });
             break;
+        case "search":
+            sfpl.search(argv._[1], function (err, listItems) {
+                listItems.forEach(function (listItem, i) {
+                    console.log("    ", i + 1, "-", listItem.title, "\t", listItem.type,
+                                "\n", "\t", listItem.callno, "(work: ", listItem.href, ")");
+                });
+                cb();
+            });
         }
     },
     function (cb) {
