@@ -32,6 +32,7 @@ function usage() {
     console.log("    lists");
     console.log("    list [listid]");
     console.log("    search \"title, author or ISBN\"");
+    console.log("    hours");
 }
 
 if (argv._.length === 0) {
@@ -43,7 +44,8 @@ var validCommands = { "checkouts": 1,
                       "holds": 1,
                       "lists": 1,
                       "list": 1,
-                      "search": 1};
+                      "search": 1,
+                      "hours": 1};
 
 var command = argv._[0];
 if (!validCommands[command]) {
@@ -112,6 +114,18 @@ async.series([
                 listItems.forEach(function (listItem, i) {
                     console.log("    ", i + 1, "-", listItem.title, "\t", listItem.type,
                                 "\n", "\t", listItem.callno, "(work: ", listItem.href, ")");
+                });
+                cb();
+            });
+        case "hours":
+        sfpl.listAllHours(function (err, listBranches) {
+            listBranches.forEach(function (listItem, i) {
+                    if (listItem.branchName == config.local_branch) {
+                        console.log("    ", listItem.branchName);
+                        listItem.days.forEach(function(branchListIem, i) {
+                          console.log("    ", branchListIem.dayOfWeek, "hours: ", branchListIem.hours);
+                        });
+                    }
                 });
                 cb();
             });

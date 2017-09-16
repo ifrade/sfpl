@@ -18,6 +18,7 @@ var LIST_PAGE = fs.readFileSync(__dirname + "/pages/a-list.html").toString();
 var USERLISTS_PAGE = fs.readFileSync(__dirname + "/pages/mylists.html").toString();
 var CHECKOUTS_PAGE = fs.readFileSync(__dirname + "/pages/checkouts.html").toString();
 var SEARCH_RESULTS_PAGE = fs.readFileSync(__dirname + "/pages/search-mason-dixon.html").toString();
+var ALLHOURS_PAGE = fs.readFileSync(__dirname + "/pages/all-hours.html").toString();
 
 describe('Parse SFPL pages', function () {
 
@@ -152,8 +153,28 @@ describe('Parse SFPL pages', function () {
             done();
         });
     });
+    it('All Hours page', function (done) {
+        sfpl.parseAllHoursPage(ALLHOURS_PAGE, function (err, items) {
+            should.not.exist(err);
+            should.exist(items);
+            const numLibraryBranches = 30;
+            const numDaysInWeek = 7;
+            items.length.should.equal(numLibraryBranches);
+            items.forEach(function(branch) {
+                branch.should.have.properties('branchName');
+                const daysArray = branch.days;
+                daysArray.length.should.equal(numDaysInWeek);
+                daysArray.forEach(function (dayItem) {
+                    dayItem.should.have.property("dayOfWeek");
+                    dayItem.should.have.property("hours");
+              });
+            });
+            done();
+        });
+  });
 
-    after(function (done) {
+
+  after(function (done) {
         done();
         //sfpl.logout(done);
     });
